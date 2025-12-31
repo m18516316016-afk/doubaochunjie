@@ -32,7 +32,6 @@ export const TIMELINE_DATA: TimelineSection[] = [
     timeLabel: '除夕 (春晚)',
     description: '春晚互动：承接春晚热度，红包雨主场。',
     items: [
-      { id: 'g1', title: '红包雨-特效', type: 'video', imageUrl: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/30eh7uhpxvbn/hongbaoluoxia.mp4', badge: '视频' },
       { id: 'g4', title: '拜年贺卡', imageUrl: 'https://p9-butterfly.byteimg.com/tos-cn-i-r8ubuxgbfe/bd14e9c55f6f4f9c8f8c7e5cb4178fb3~tplv-r8ubuxgbfe-image.png', badge: '互动', subTitle: 'GALA GREETING' },
       { id: 'g2', title: '新春头像', imageUrl: 'https://p9-butterfly.byteimg.com/tos-cn-i-r8ubuxgbfe/34f2064abfb94293ac1c2fba6688b3db~tplv-r8ubuxgbfe-image.png' },
       { id: 'g3', title: '新春Plog/三宫格', imageUrl: 'https://p9-butterfly.byteimg.com/tos-cn-i-r8ubuxgbfe/545031c29fe74cdf838829b67b0e6bba~tplv-r8ubuxgbfe-image.png' },
