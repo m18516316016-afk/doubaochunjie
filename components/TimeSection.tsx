@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TimelineSection } from '../types.ts';
 import ShowcaseCard from './ShowcaseCard.tsx';
@@ -56,22 +55,25 @@ const TimeSection: React.FC<TimeSectionProps> = ({ section, index }) => {
   };
 
   return (
-    <div className="section-container relative py-24 md:py-40 w-full max-w-[100rem] mx-auto px-6 md:px-16 lg:px-24 flex flex-col items-start gap-12 md:gap-20">
-      <div className="absolute left-6 md:left-16 lg:left-24 top-0 bottom-0 w-[2px] pointer-events-none z-0">
-          <div className="vertical-line h-full opacity-30" />
+    <div className="section-container relative py-24 md:py-40 w-full max-w-[100rem] mx-auto px-10 md:px-24 lg:px-40 flex flex-col items-start gap-12 md:gap-20">
+      {/* Background Vertical Line Segment */}
+      <div className="absolute left-10 md:left-24 lg:left-40 top-0 bottom-0 w-[3px] -translate-x-1/2 pointer-events-none z-0">
+          <div className="vertical-line h-full opacity-60" />
       </div>
 
       <div className="flex flex-col z-20 w-full relative">
-        <div className="mb-4 md:mb-6">
-          <span className="magazine-number display-font text-[7rem] md:text-[12rem] font-black leading-none select-none pointer-events-none inline-block transform -translate-x-4 md:-translate-x-8">
+        {/* Added pl-8 md:pl-12 to align with the heading container */}
+        <div className="mb-4 md:mb-6 pl-8 md:pl-12">
+          <span className="magazine-number display-font text-[7rem] md:text-[12rem] font-black leading-none select-none pointer-events-none inline-block">
             {index + 1 < 10 ? `0${index + 1}` : index + 1}
           </span>
         </div>
 
         <div className="relative">
-          <div className="absolute left-[-1.5rem] md:left-[-4.1rem] lg:left-[-6.1rem] top-[1.2rem] md:top-[2.2rem] -translate-x-1/2 timeline-node w-5 h-5 md:w-7 md:h-7 rounded-full z-30 ring-8 ring-black/95" />
+          {/* Timeline Dot: Centered perfectly on the line */}
+          <div className="absolute left-0 -translate-x-1/2 top-[1.2rem] md:top-[2.2rem] timeline-node w-6 h-6 md:w-8 md:h-8 rounded-full z-30 ring-[12px] ring-black" />
           
-          <div className="flex flex-col space-y-6 md:space-y-8 pl-4">
+          <div className="flex flex-col space-y-6 md:space-y-8 pl-8 md:pl-12">
             <h2 className="serif-title text-5xl md:text-8xl text-white font-black tracking-tighter uppercase leading-[0.85]">
               {section.timeLabel}
             </h2>
@@ -85,7 +87,7 @@ const TimeSection: React.FC<TimeSectionProps> = ({ section, index }) => {
         </div>
       </div>
 
-      <div className="w-full z-10 pt-4">
+      <div className="w-full z-10 pt-4 pl-8 md:pl-12">
         {renderContent()}
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TIMELINE_DATA } from './constants.tsx';
 import TimeSection from './components/TimeSection.tsx';
@@ -40,16 +39,17 @@ const App: React.FC = () => {
         </div>
 
         {/* Timeline Indicator (Header Version) */}
-        <div className="absolute bottom-20 left-6 md:left-12 flex flex-col items-center space-y-8 opacity-70">
-          <div className="timeline-node w-4 h-4 rounded-full mb-2 shadow-[0_0_20px_rgba(204,27,27,1)]" />
-          <div className="w-[2px] h-40 vertical-line opacity-100" />
-          <span className="text-[10px] text-red-900 uppercase tracking-[0.8em] font-black [writing-mode:vertical-lr]">Scroll to Explore</span>
+        <div className="absolute bottom-20 left-10 md:left-24 lg:left-40 flex flex-col items-center space-y-8 opacity-90 -translate-x-1/2">
+          <div className="timeline-node w-5 h-5 rounded-full mb-2 shadow-[0_0_25px_rgba(255,26,26,1)]" />
+          <div className="w-[3px] h-40 vertical-line opacity-100" />
+          <span className="text-[10px] text-red-900 uppercase tracking-[0.8em] font-black [writing-mode:vertical-lr] mt-4">Scroll to Explore</span>
         </div>
       </section>
 
       {/* Main Content Area */}
       <main className="relative z-10 pb-60">
-        <div className="absolute left-6 md:left-12 top-0 bottom-0 vertical-line opacity-25 pointer-events-none" />
+        {/* Continuous background timeline line */}
+        <div className="absolute left-10 md:left-24 lg:left-40 top-0 bottom-0 w-[3px] -translate-x-1/2 vertical-line opacity-30 pointer-events-none" />
         
         {TIMELINE_DATA.map((section, idx) => (
           <TimeSection 
